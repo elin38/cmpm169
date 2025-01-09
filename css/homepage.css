@@ -118,6 +118,9 @@
 }
 
 /* Link Hover Effects */
+.minor-section h2 {
+  text-decoration: underline;
+}
 .minor-section ul li a {
   text-decoration: none;
   position: relative;
