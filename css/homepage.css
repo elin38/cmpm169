@@ -1,3 +1,5 @@
+/* Font imported with the help of chatGPT and Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
 
 .image-wrapper {
   width: 100%x;
@@ -17,4 +19,154 @@
 
 .two-column>*:nth-child(2) {
   flex: 1;
+}
+
+.info {
+  background: linear-gradient(135deg, #7209B7, #4361EE);
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.minor-section {
+  background: linear-gradient(135deg, #f4f4fc, #e0e6fc);
+  border: 1px solid #4361EE;
+  border-radius: 15px;
+  color: #483d8b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.minor-section:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.minor-section:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#content {
+  background: linear-gradient(135deg, #ffffff, #e0e6fc);
+  color: #483d8b;
+  padding: 1em;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+  font-family: "Noto Serif TC", serif;
+}
+
+/* The following was written with the help of chatGPT */
+.hero {
+  background: linear-gradient(135deg, #7209B7, #4361EE);
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  border-radius: 10px;
+  margin-bottom: 1em;
+
+  background-size: 200% 200%;
+  animation: gradientMove 5s infinite, fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 0.5em 0 0;
+}
+
+/* Link Hover Effects */
+.minor-section ul li a {
+  text-decoration: none;
+  position: relative;
+  color: #483d8b;
+  transition: color 0.3s ease;
+}
+
+.minor-section ul li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #F72585;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.minor-section ul li a:hover {
+  color: #F72585;
+}
+
+.minor-section ul li a:hover:after {
+  transform: scaleX(1);
+}
+
+.image-wrapper {
+  width: 100%;
+  padding: 0;
+  border-radius: 15px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px solid #4362eebe;
+  box-sizing: border-box;
+
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
